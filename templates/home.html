@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aishwarya Personal AI</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(120deg,#1e3c72,#2a5298);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+
+width:95%;
+max-width:650px;
+background:white;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
+padding:20px;
+
+}
+
+.header{
+
+background: linear-gradient(90deg,#00c6ff,#0072ff);
+color:white;
+padding:15px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.header h2{
+
+margin:0;
+}
+
+.header p{
+
+margin:5px;
+font-size:13px;
+opacity:0.9;
+
+}
+
+.chatbox{
+
+height:300px;
+background:#f4f7ff;
+border-radius:15px;
+padding:15px;
+overflow-y:auto;
+font-size:15px;
+margin-top:15px;
+
+}
+
+.user{
+
+background:#0072ff;
+color:white;
+padding:8px 12px;
+border-radius:10px;
+margin:5px 0;
+text-align:right;
+
+}
+
+.bot{
+
+background:#e3e8ff;
+padding:8px 12px;
+border-radius:10px;
+margin:5px 0;
+
+}
+
+.input-area{
+
+display:flex;
+margin-top:15px;
+gap:10px;
+
+}
+
+.input-area input[type="text"]{
+
+flex:1;
+padding:12px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:15px;
+
+}
+
+.input-area button{
+
+background:#0072ff;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+
+}
+
+.input-area button:hover{
+
+background:#0056cc;
+
+}
+
+.footer{
+
+text-align:center;
+font-size:12px;
+color:#777;
+margin-top:10px;
+
+}
+
+</style>
+
+<script>
+
+function scrollChat(){
+
+var chatbox=document.getElementById("chatbox");
+chatbox.scrollTop=chatbox.scrollHeight;
+
+}
+
+</script>
+
+</head>
+
+<body onload="scrollChat()">
+
+<div class="container">
+
+<div class="header">
+
+<h2>🤖 Aishwarya Personal AI</h2>
+
+<p>Ask about my Skills, Projects, Internship, FitNova & AI Journey</p>
+
+</div>
+
+
+<div class="chatbox" id="chatbox">
+
+{{ chat | safe }}
+
+</div>
+
+
+<form method="POST">
+
+<div class="input-area">
+
+<input type="text" name="qts" placeholder="Ask something about Aishwarya..." required>
+
+<button type="submit">Send</button>
+
+</div>
+
+</form>
+
+
+<div class="footer">
+
+Developed by Aishwarya Dalvi • AI Chatbot Portfolio
+
+</div>
+
+</div>
+
+</body>
+</html>
